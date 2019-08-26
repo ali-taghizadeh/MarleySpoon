@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">MarleySpoon</string>
     <string name="image_content">image_content</string>
+    <string name="item_position">position</string>
+    <string name="shared_element">imageViewPhoto</string>
 </resources>
