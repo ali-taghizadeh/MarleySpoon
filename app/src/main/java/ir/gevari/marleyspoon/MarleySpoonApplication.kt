@@ -4,8 +4,11 @@ import android.app.Application
 import ir.gevari.marleyspoon.data.db.MarleySpoonDatabase
 import ir.gevari.marleyspoon.data.network.NetworkDataSource
 import ir.gevari.marleyspoon.data.network.NetworkDataSourceImpl
+import ir.gevari.marleyspoon.data.repository.DetailsRepository
+import ir.gevari.marleyspoon.data.repository.DetailsRepositoryImpl
 import ir.gevari.marleyspoon.data.repository.RecipeListRepository
 import ir.gevari.marleyspoon.data.repository.RecipeListRepositoryImpl
+import ir.gevari.marleyspoon.view.details.DetailsViewModelFactory
 import ir.gevari.marleyspoon.view.recipeList.RecipeViewModelFactory
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -19,6 +22,8 @@ class MarleySpoonApplication : Application(), KodeinAware {
         bind() from singleton { instance<MarleySpoonDatabase>().recipeListDao() }
         bind<NetworkDataSource>() with singleton { NetworkDataSourceImpl() }
         bind<RecipeListRepository>() with singleton { RecipeListRepositoryImpl(instance(), instance()) }
+        bind<DetailsRepository>() with singleton { DetailsRepositoryImpl(instance()) }
         bind() from provider { RecipeViewModelFactory(instance()) }
+        bind() from provider { DetailsViewModelFactory(instance()) }
     }
 }
