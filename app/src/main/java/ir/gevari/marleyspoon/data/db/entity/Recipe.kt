@@ -1,4 +1,4 @@
-package ir.gevari.marleyspoon.data.entity
+package ir.gevari.marleyspoon.data.db.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

@@ -2,8 +2,8 @@ package ir.gevari.marleyspoon.data
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson
-import ir.gevari.marleyspoon.data.entity.Chef
-import ir.gevari.marleyspoon.data.entity.Tags
+import ir.gevari.marleyspoon.data.db.entity.Chef
+import ir.gevari.marleyspoon.data.db.entity.Tags
 
 class RecipeTypeConverters {
 

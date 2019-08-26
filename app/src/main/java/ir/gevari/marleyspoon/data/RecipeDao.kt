@@ -5,7 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import ir.gevari.marleyspoon.data.entity.Recipe
+import ir.gevari.marleyspoon.data.db.entity.Recipe
 
 @Dao
 interface RecipeDao {
