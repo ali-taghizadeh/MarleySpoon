@@ -4,4 +4,9 @@
     <dimen name="elevation">5dp</dimen>
     <dimen name="default_margin">8dp</dimen>
     <dimen name="text_default">24sp</dimen>
+    <dimen name="image_detail">300dp</dimen>
+    <dimen name="title_detail_margin">94dp</dimen>
+    <dimen name="text_extra">30sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="behavior_overlapTop">78dp</dimen>
 </resources>

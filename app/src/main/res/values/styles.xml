@@ -8,4 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TextAppearance.AppCompat.expanded">
+        <item name="android:textSize">@dimen/text_extra</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:elevation">@dimen/elevation</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.main">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/textWhite</item>
+        <item name="android:elevation">@dimen/elevation</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
 </resources>
