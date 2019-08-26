@@ -1,9 +1,10 @@
-package ir.gevari.marleyspoon
+package ir.gevari.marleyspoon.view.recipeList
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import ir.gevari.marleyspoon.R
+import ir.gevari.marleyspoon.view.base.ScopedActivity
 
-class MainActivity : AppCompatActivity() {
+class RecipeListActivity : ScopedActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
