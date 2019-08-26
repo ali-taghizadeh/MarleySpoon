@@ -28,6 +28,7 @@ object ApiClient {
             .retryOnConnectionFailure(true)
             .connectTimeout(connectionTimeOut, TimeUnit.SECONDS)
             .readTimeout(readTimeOut, TimeUnit.SECONDS)
+            .addInterceptor(HeadersInterceptor())
             .addInterceptor(loggingInterceptor)
             .build()
 
