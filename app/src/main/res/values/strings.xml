@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MarleySpoon</string>
+    <string name="image_content">image_content</string>
 </resources>
