@@ -16,20 +16,22 @@ class NetworkDataSourceImpl : NetworkDataSource {
         get() = _downloadedMasterList
 
     override suspend fun fetchRecipeList() {
-        try {
-            val fetchedMasterList = ApiClient.invoke().fetch(CDAEntry::class.java)
-                .withContentType(BuildConfig.CONTENT_TYPE)
-                .include(10)
-                .all()
-                .items()
-                .map {
-                    Recipe.mapToRecipe(
-                        it as CDAEntry
-                    )
-                }
-            _downloadedMasterList.postValue(fetchedMasterList)
-        } catch (ex: IOException) {
-            Log.e("exception", ex.message)
+        if (isOnline()) {
+            try {
+                val fetchedMasterList = ApiClient.invoke().fetch(CDAEntry::class.java)
+                    .withContentType(BuildConfig.CONTENT_TYPE)
+                    .include(10)
+                    .all()
+                    .items()
+                    .map {
+                        Recipe.mapToRecipe(
+                            it as CDAEntry
+                        )
+                    }
+                _downloadedMasterList.postValue(fetchedMasterList)
+            } catch (ex: IOException) {
+                Log.e("exception", ex.message)
+            }
         }
     }
 }
